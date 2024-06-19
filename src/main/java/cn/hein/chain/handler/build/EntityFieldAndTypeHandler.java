@@ -1,6 +1,5 @@
-package cn.hein.chain.handler;
+package cn.hein.chain.handler.build;
 
-import cn.hein.chain.BuildTableInfoChainHandler;
 import cn.hein.entity.FieldInfo;
 import cn.hein.entity.TableInfo;
 import cn.hutool.core.text.StrBuilder;
@@ -15,7 +14,7 @@ import static cn.hein.common.Constant.SQL_TO_JAVA_TYPE;
  *
  * @author hein
  */
-public class EntityFieldAndTypeHandler implements BuildTableInfoChainHandler<List<TableInfo>> {
+public class EntityFieldAndTypeHandler implements BuildTableInfoFilter<List<TableInfo>> {
 
     @Override
     public void handle(List<TableInfo> data) {

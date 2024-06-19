@@ -1,6 +1,5 @@
-package cn.hein.chain.handler;
+package cn.hein.chain.handler.build;
 
-import cn.hein.chain.BuildTableInfoChainHandler;
 import cn.hein.entity.FieldInfo;
 import cn.hein.entity.TableInfo;
 import cn.hein.factory.ConnectionFactory;
@@ -22,7 +21,7 @@ import static cn.hein.common.Constant.GENERATE_ALL_TABLE;
  * @author hein
  */
 @Slf4j
-public class BaseInfoHandler implements BuildTableInfoChainHandler<List<TableInfo>> {
+public class BaseInfoHandler implements BuildTableInfoFilter<List<TableInfo>> {
 
     private static final String SHOW_TABLE_STATUS = "SHOW TABLE STATUS;";
     private static final String SHOW_FULL_FIELDS_FROM_TABLE = "SHOW FULL FIELDS FROM %s;";
