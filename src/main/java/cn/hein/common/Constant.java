@@ -13,6 +13,11 @@ public class Constant {
 
     public static Boolean IGNORE_TABLE_PREFIX = Boolean.valueOf(PropertiesUtils.getProperty("ignore.table.prefix"));
     public static Boolean GENERATE_ALL_TABLE = Boolean.valueOf(PropertiesUtils.getProperty("generate.all.table"));
+    public static String ENTITY_PACKAGE = PropertiesUtils.getProperty("generate.entity.package");
+    public static String MAPPER_PACKAGE = PropertiesUtils.getProperty("generate.mapper.package");
+    public static String SERVICE_PACKAGE = PropertiesUtils.getProperty("generate.service.package");
+    public static String CONTROLLER_PACKAGE = PropertiesUtils.getProperty("generate.controller.package");
+    public static String AUTHOR = PropertiesUtils.getProperty("author");
 
     public static Map<String, String> SQL_TO_JAVA_TYPE = Map.ofEntries(
             Map.entry("varchar", "String"),

@@ -1,7 +1,7 @@
 package cn.hein.chain.handler.build;
 
-import cn.hein.entity.FieldInfo;
-import cn.hein.entity.TableInfo;
+import cn.hein.metadata.FieldInfo;
+import cn.hein.metadata.TableInfo;
 import cn.hein.factory.ConnectionFactory;
 import cn.hein.toolkit.PropertiesUtils;
 import lombok.extern.slf4j.Slf4j;

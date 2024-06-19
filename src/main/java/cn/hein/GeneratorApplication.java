@@ -1,16 +1,20 @@
 package cn.hein;
 
-import cn.hein.entity.TableInfo;
-import cn.hein.chain.BuildTableInfoChainContext;
+import cn.hein.chain.AbstractChainContext;
+import cn.hein.metadata.TableInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 代码生成器启动类
+ *
+ * @author hein
+ */
 public class GeneratorApplication {
-    public static void main(String[] args) {
-        BuildTableInfoChainContext<List<TableInfo>> context = new BuildTableInfoChainContext<>();
-        ArrayList<TableInfo> data = new ArrayList<>();
-        context.handler(data);
-        System.out.println("data = " + data);
+
+    public static void doGenerate() {
+        AbstractChainContext<List<TableInfo>> context = new AbstractChainContext<>();
+        context.handler(new ArrayList<>());
     }
 }

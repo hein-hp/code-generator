@@ -31,4 +31,19 @@ public class TableInfo {
      * 字段信息
      */
     private List<FieldInfo> fieldInfoList;
+
+    /**
+     * 是否存在 date 类型
+     */
+    private Boolean hasDate;
+
+    /**
+     * 是否存在 datetime 类型
+     */
+    private Boolean hasDateTime;
+
+    /**
+     * 是否有 decimal 类型
+     */
+    private Boolean hasDecimal;
 }

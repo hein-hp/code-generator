@@ -3,6 +3,11 @@ package cn.hein.chain;
 import cn.hein.chain.handler.build.BaseInfoHandler;
 import cn.hein.chain.handler.build.EntityFieldAndTypeHandler;
 import cn.hein.chain.handler.build.EntityNameHandler;
+import cn.hein.chain.handler.build.ExtraInfoHandler;
+import cn.hein.chain.handler.generate.ControllerGenerateHandler;
+import cn.hein.chain.handler.generate.EntityGenerateHandler;
+import cn.hein.chain.handler.generate.MapperGenerateHandler;
+import cn.hein.chain.handler.generate.ServiceGenerateHandler;
 
 import java.util.List;
 
@@ -20,7 +25,12 @@ public class AbstractChainContext<T> {
         abstractChainHandlerContainer = List.of(
                 (AbstractChainHandler<T>) new BaseInfoHandler(),
                 (AbstractChainHandler<T>) new EntityNameHandler(),
-                (AbstractChainHandler<T>) new EntityFieldAndTypeHandler()
+                (AbstractChainHandler<T>) new EntityFieldAndTypeHandler(),
+                (AbstractChainHandler<T>) new ExtraInfoHandler(),
+                (AbstractChainHandler<T>) new EntityGenerateHandler(),
+                (AbstractChainHandler<T>) new MapperGenerateHandler(),
+                (AbstractChainHandler<T>) new ServiceGenerateHandler(),
+                (AbstractChainHandler<T>) new ControllerGenerateHandler()
         );
     }
 
