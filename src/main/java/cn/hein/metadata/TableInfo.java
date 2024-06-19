@@ -1,4 +1,4 @@
-package cn.hein.entity;
+package cn.hein.metadata;
 
 import lombok.Data;
 
