@@ -8,6 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 配置工具类
+ *
+ * @author hein
  */
 public class PropertiesUtils {
 

@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 
 /**
  * 表处理器
+ *
+ * @author hein
  */
 @Slf4j
 public class TableHandler {
@@ -22,7 +24,7 @@ public class TableHandler {
                 ResultSet resultSet = preparedStatement.executeQuery()
         ) {
             while (resultSet.next()) {
-                String tableName = resultSet.getString("Name"); // 注意MySQL的列名通常大写
+                String tableName = resultSet.getString("Name");
                 String comment = resultSet.getString("Comment");
                 log.info("tableName: {}, comment: {}", tableName, comment);
             }

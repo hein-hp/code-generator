@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 /**
  * MySQL 连接工厂
+ *
+ * @author hein
  */
 @Slf4j
 public class ConnectionFactory {
