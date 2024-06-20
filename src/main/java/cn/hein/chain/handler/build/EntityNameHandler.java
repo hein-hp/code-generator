@@ -7,6 +7,7 @@ import cn.hutool.core.util.StrUtil;
 import java.util.List;
 
 import static cn.hein.common.Constant.IGNORE_TABLE_PREFIX;
+import static cn.hein.common.Constant.IGNORE_TABLE_PREFIX_VALUE;
 
 /**
  * EntityName 设置处理器
@@ -24,17 +25,13 @@ public class EntityNameHandler implements BuildTableInfoFilter<List<TableInfo>> 
      * 处理表名称前缀
      */
     private void handleTableName(TableInfo tableInfo) {
-        String[] strs = tableInfo.getTableName().split("_");
-        StrBuilder entityName = StrBuilder.create();
+        String tableName = tableInfo.getTableName();
         if (IGNORE_TABLE_PREFIX) {
-            for (int i = 1; i < strs.length; i++) {
-                entityName.append(StrUtil.upperFirst(strs[i]));
-            }
-        } else {
-            for (String str : strs) {
-                entityName.append(StrUtil.upperFirst(str));
-            }
+            tableName = tableName.replace(IGNORE_TABLE_PREFIX_VALUE, "");
         }
+        List<String> strs = StrUtil.split(tableName, "_");
+        StrBuilder entityName = StrBuilder.create();
+        strs.forEach(str -> entityName.append(StrUtil.upperFirst(str)));
         tableInfo.setEntityName(entityName.toString());
     }
 }

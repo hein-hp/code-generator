@@ -12,6 +12,7 @@ import java.util.Map;
 public class Constant {
 
     public static Boolean IGNORE_TABLE_PREFIX = Boolean.valueOf(PropertiesUtils.getProperty("ignore.table.prefix"));
+    public static String IGNORE_TABLE_PREFIX_VALUE = PropertiesUtils.getProperty("ignore.table.prefix.value");
     public static Boolean GENERATE_ALL_TABLE = Boolean.valueOf(PropertiesUtils.getProperty("generate.all.table"));
     public static String ENTITY_PACKAGE = PropertiesUtils.getProperty("generate.entity.package");
     public static String MAPPER_PACKAGE = PropertiesUtils.getProperty("generate.mapper.package");
