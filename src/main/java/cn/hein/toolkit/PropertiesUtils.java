@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class PropertiesUtils {
 
-    private static final String PROPERTIES_FILE_NAME = "config.properties";
+    private static final String PROPERTIES_FILE_NAME = "code-generate-config.properties";
     private static final String SPLIT_SIGN = ",";
 
     private static final Map<String, Object> propertiesMap = new ConcurrentHashMap<>();
