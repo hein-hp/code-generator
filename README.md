@@ -30,14 +30,16 @@ code-generator
 # code-generator config
 
 ########## database config ##########
-jdbc.url=jdbc:mysql://mysql-ip:3306/database?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+jdbc.url=jdbc:mysql://mysql-ip:3306/test?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 jdbc.username=username
 jdbc.password=password
 jdbc.driver=com.mysql.cj.jdbc.Driver
 
-####### table generator config #######
+######### generator config ##########
 # 是否忽略表前缀
 ignore.table.prefix=true
+# 忽略表前缀
+ignore.table.prefix.value=t_
 # 是否为所有表生成代码（generate.all.table 优先级更高）
 generate.all.table=false
 # 需要生成代码的表名称
@@ -51,7 +53,7 @@ generate.service.package=cn.hein.service
 # 生成Controller的包路径
 generate.controller.package=cn.hein.controller
 
-############# extra info #############
+############ extra info ##############
 author=hein
 ```
 
